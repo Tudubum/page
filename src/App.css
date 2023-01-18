@@ -1,38 +1,167 @@
-.App {
-  text-align: center;
+body{
+    margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*          HEADER          */
+.header{
+    margin:0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #85586F;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.placeForm{
+    margin: 20px 50px;
+    
+}
+
+.placeForm form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #DFD3C3;
+    border-radius: 5px;
+    padding: 10px;
+   justify-content: center;
+}
+
+.placeForm form label{
+    margin: 2px;
+    font-weight: 100;
+    width: 200px;
+}
+
+.placeForm form input{
+    width: 190px;
+}
+
+.placeForm form button{
+    margin-top: 8px;
+    width: 200px;
+    background-color: #85586F;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: rgb(0, 0, 0);
+}
+
+.placeForm form button:hover{
+    background-color: #422b37;
+    color: white;
+}
+
+.text{
+    display: flex;
+}
+
+.text img{
+    height: 50px;
+}
+
+.SignInForm{
+    text-align: right;
+    background-color:#85586F;
+    padding-bottom: 20px;
+    padding-right: 50px;
+
+}
+
+.SignInForm input{
+    padding: 3px;
+    margin: 3px
+}
+
+.SignInForm .submit{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D0B8A8;
+    color: rgb(0, 0, 0);
+}
+
+.SignInForm .submit:hover{
+    background-color: #8e7f75;
+    color: white;
+}
+
+.checkboxas{
+    display: flex;
+    text-align: left;
+    width: 20px !important;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 8px;
+}
+
+.text p{
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/*                  CONTENT         */
+
+.placeCard {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 350px;
+}
+
+.placeCard img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.visasHeader{
+    display: flex;
+    margin: 20px 40px;
+}
+
+body {
+    background-color: #F8EDE3;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .info{
+    padding: 10px 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .info p{
+    font-size: 14px;
+    font-weight: 100;
+    text-align: justify;
   }
+
+  .info button{
+    background-color: #D0B8A8;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-right: 5px;
+  }
+
+  button:hover{
+    background-color: #8e7f75;
+    color: white;
+  }
+
+
+
+/*          FOOTER          */
+
+.footer{
+    background-color: #0C1011;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,0 +1,52 @@
+{
+  "Restingplace": [
+    {
+      "image": "https://glampinglithuania.lt/wp-content/uploads/2021/03/namelis-nr-3..-1200x720.jpg",
+      "location": "Baltieji Lakajai, Moletų apskritis",
+      "title": "Glamping Lithuania",
+      "about": "Šis namelis išsiskiria tuo, jog yra ypatingai erdvus, o vaizdas pro langą visais metų laikais tiesiog užburia!! Taip pat šiame namelyje rasite ir elipsine vonią. Vieno kambario namelis dviems su peizažu į Baltųjų Lakajų ežerą.",
+      "arAplankyta": true,
+      "id": 1
+    },
+    {
+      "image": "https://static.wixstatic.com/media/6f6e26_9c727b29f32c41d68cf62363212006ca~mv2.jpg/v1/fit/w_361,h_241,q_90/6f6e26_9c727b29f32c41d68cf62363212006ca~mv2.jpg",
+      "location": "Kaišiadorys, Lietuva",
+      "title": "Genio kampas Treehouse",
+      "about": "Nepamirštamas poilsis gamtoje su visais patogumais ant ežero kranto. Namelis medyje yra privačioje 9 ha ploto teritorijoje, tad visiškas privatumas garantuotas. Genio kampe galėsite mėgautis ramybe bei gamta net iš 6 metrų aukštyje esančios terasos.",
+      "arAplankyta": false,
+      "id": 2
+    },
+    {
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/367191430.jpg?k=5a25cd0a3dce16482def84962ad21a629f030250e2d422dc17d42d19598ee2a9&o=&hp=1",
+      "location": "Kampiškiai, Lietuva",
+      "title": "Cozy ALNUS KIEMAS house",
+      "about": "Maždaug už 36 km nuo Kauno „Žalgirio“ arenos įsikūrusioje apgyvendinimo įstaigoje „ALNUS KIEMAS“, iš kurios atsiveria sodo vaizdai, yra terasa ir kiemelis. Čia veikia nemokamas belaidis internetas. Šio atostogų namelio svečiams siūloma ilsėtis sode ir naudotis lauko kepsnine. Automobilį galima pasistatyti nemokamai.",
+      "arAplankyta": true,
+      "id": 3
+    },
+    {
+      "image": "https://l.icdbcdn.com/oh/34a2de4f-9d8f-42ff-b11d-ea5981c3ba27.jpg?w=1920",
+      "location": "Dauparai, Lietuva",
+      "title": "Rest in Forest Miško namelis",
+      "about": "Rest in forest poilsiavietė įsikūrusi šalia nuostabaus išeksploatuotas karjero kranto, kuris žinomas dėl nuostabaus smaragdo spalvos vandens. Čia vandens ir miško apsuptyje įkurti du jaukūs nameliai poilsiui.",
+      "arAplankyta": true,
+      "id": 7
+    },
+    {
+      "image": "https://static.wixstatic.com/media/62c7c8_fad7f6a960894170b7758f825b12e2e5~mv2.png/v1/fill/w_1200,h_799,al_c/62c7c8_fad7f6a960894170b7758f825b12e2e5~mv2.png",
+      "location": "Kuosinės kaimas, Vilniaus rajonas",
+      "title": "Forest Domes",
+      "about": "Dažnai naujų pojūčių ir gamtos ramybės troškimą nugali patogumas. Šiame projekte būtent to ir siekėme- sukurti prabangų jaukumą gamtos apsuptyje. Todėl be rūpeščių, apsupti miškų ir laukų, galėsite mėgautis ramybe ir jei pasiseks- stebėti netgi stirnas, kurios neretai užsuka pasmalsauti visai netoli kupolų.",
+      "arAplankyta": false,
+      "id": 10
+    },
+    {
+      "image": "https://static.wixstatic.com/media/62c7c8_fad7f6a960894170b7758f825b12e2e5~mv2.png/v1/fill/w_1200,h_799,al_c/62c7c8_fad7f6a960894170b7758f825b12e2e5~mv2.png",
+      "location": "Kuosinės kaimas, Vilniaus rajonas",
+      "title": "Forest Domes",
+      "about": "Dažnai naujų pojūčių ir gamtos ramybės troškimą nugali patogumas. Šiame projekte būtent to ir siekėme- sukurti prabangų jaukumą gamtos apsuptyje. Todėl be rūpeščių, apsupti miškų ir laukų, galėsite mėgautis ramybe ir jei pasiseks- stebėti netgi stirnas, kurios neretai užsuka pasmalsauti visai netoli kupolų.",
+      "arAplankyta": false,
+      "id": 11
+    }
+  ]
+}
