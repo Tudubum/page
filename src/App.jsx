@@ -54,7 +54,7 @@ const addPlace = async (e) => {
   fetchData();
 }
 
-const editPlace = async (id) => {
+/*const editPlace = async (id) => {
   const updatedPlace = { image, location, title, about, arAplankyta };
   await fetch(`http://localhost:7000/Restingplace/${id}`, {
     method: 'PUT',
@@ -69,7 +69,19 @@ const editPlace = async (id) => {
   setArAplankyta('');
   fetchData();
 }
+*/
 
+const editPlace = async (id) => {
+  // Find the place object that needs to be edited
+  const placeToEdit = data.find(place => place.id === id);
+  // Update the state variables with the values from the place object
+  setImage(placeToEdit.image);
+  setLocation(placeToEdit.location);
+  setTitle(placeToEdit.title);
+  setAbout(placeToEdit.about);
+  setArAplankyta(placeToEdit.arAplankyta);
+  setEditing(id); // set the id of the place that is currently being edited
+}
 
 const deletePlace = async (id) => {
   await fetch(`http://localhost:7000/Restingplace/${id}`, {
@@ -104,13 +116,18 @@ useEffect(() => {
       </header>
 
       <AddPlaceForm 
+        image={image}
+        location={location}
+        title={title}
+        about={about}
+        arAplankyta={arAplankyta}
+        addPlace={addPlace}
+        editing={editing}
         setImage={setImage}
         setLocation={setLocation}
         setTitle={setTitle}
         setAbout={setAbout}
         setArAplankyta={setArAplankyta}
-        addPlace={addPlace}
-        editing={editing}
 
       />
 
