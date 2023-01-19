@@ -1,6 +1,4 @@
 import React from "react";
-//import PlaceCard from "./PlaceCard";
-//import { useState } from 'react';
 
 const AddPlaceForm = ({title,setTitle,image,setImage,location,setLocation,about,setAbout,arAplankyta, setArAplankyta, addPlace}) => {
         return ( 
@@ -27,7 +25,7 @@ const AddPlaceForm = ({title,setTitle,image,setImage,location,setLocation,about,
                         Ar esi buvęs?
                         <input type="checkbox" className="checkboxas" value={arAplankyta} onChange={(e)=> setArAplankyta(e.target.checked)} />
                     </label>
-                    <button type="submit">Pridėti poilsio vietą</button>
+                    <button type="submit">Pridėti naują vietą</button>
                 </form>
             </div>
         </> );

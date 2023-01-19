@@ -1,10 +1,9 @@
 import PageLogo from '../images/UnwindCabins.png';
-//import User from '../images/logo3.png';
 import SignInForm from './SignInForm';
 
 //import { useState } from 'react';
 
-const Header = () => {
+const Header = ({users, onSuccess, arPrisijunges}) => {
     return ( 
         <>
             <div className="header">
@@ -12,7 +11,12 @@ const Header = () => {
                     <img src={PageLogo} alt="pageLogo" />
                 </div>
                 <div className="text">
-                        <SignInForm />
+                    { arPrisijunges ? 
+                        <h1>You are logged in</h1> 
+                        : 
+                        <SignInForm onSuccess={onSuccess}
+                        users={users} /> 
+                    }
                 </div>
             </div>
         </>

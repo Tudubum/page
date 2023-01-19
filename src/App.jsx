@@ -18,8 +18,16 @@ const [arAplankyta, setArAplankyta] = useState('false');
 const [data, setData] = useState(null);
 const [editing, setEditing] = useState(null);
 
+const [message, setMessage] = useState('');
+
+const handleSuccess = (message) => {
+  setMessage(message);
+  setArPrisijunges(true);
+}
 
 const [arPrisijunges, setArPrisijunges] = useState(false);
+const [users, setUsers] = useState([]);
+
 
 const fetchData = async () => {
   const dataRestingPlace = await fetch('http://localhost:7000/Restingplace')
@@ -36,13 +44,6 @@ const addPlace = async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedPlace),
     });
-
-      setImage('');
-      setLocation('');
-      setTitle('');
-      setAbout(false);
-      setArAplankyta('');
-
   } else{
     const newPlace = {image, location, title, about, arAplankyta};
     await fetch ('http://localhost:7000/Restingplace',{
@@ -51,36 +52,25 @@ const addPlace = async (e) => {
       body: JSON.stringify(newPlace),
     });
   }
-  fetchData();
-}
+    setImage('');
+    setLocation('');
+    setTitle('');
+    setAbout('');
+    setArAplankyta('');
+    fetchData();
+  }
 
-/*const editPlace = async (id) => {
-  const updatedPlace = { image, location, title, about, arAplankyta };
-  await fetch(`http://localhost:7000/Restingplace/${id}`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(updatedPlace),
-  });
-  setEditing(null);
-  setImage('');
-  setLocation('');
-  setTitle('');
-  setAbout(false);
-  setArAplankyta('');
-  fetchData();
-}
-*/
 
 const editPlace = async (id) => {
-  // Find the place object that needs to be edited
+
   const placeToEdit = data.find(place => place.id === id);
-  // Update the state variables with the values from the place object
   setImage(placeToEdit.image);
   setLocation(placeToEdit.location);
   setTitle(placeToEdit.title);
   setAbout(placeToEdit.about);
   setArAplankyta(placeToEdit.arAplankyta);
-  setEditing(id); // set the id of the place that is currently being edited
+  setEditing(id);
+  
 }
 
 const deletePlace = async (id) => {
@@ -90,29 +80,28 @@ const deletePlace = async (id) => {
   fetchData();
 }
 
+
+useEffect(() => {
+  if (arPrisijunges) {
+    fetch('http://localhost:3000/users')
+      .then(response => response.json())
+      .then(data => setUsers(data))
+      .catch(error => console.error(error))
+  }
+}, [arPrisijunges]);
+
+
 useEffect(() => {
   fetchData();
 }, []);
 
-  //atsijungti, kai iskvieciama - prisijungimas tampa false
-  const handleLogOut = () => {
-    setArPrisijunges(false)
-  }
-
-
   return (
     <>
       <header>
-       {
-          arPrisijunges ?
-            <>
-              <label>Esatę prisijungęs</label>
-              <button onClick={handleLogOut} className="atsijungti">Atsijungti</button>
-            </>
-            :
-            <Header prijungti={setArPrisijunges}
-             />
-        }
+        <Header 
+        onSuccess={handleSuccess} 
+        arPrisijunges={arPrisijunges}
+        users={users}/>
       </header>
 
       <AddPlaceForm 
@@ -128,7 +117,6 @@ useEffect(() => {
         setTitle={setTitle}
         setAbout={setAbout}
         setArAplankyta={setArAplankyta}
-
       />
 
       <div className="visasHeader">
